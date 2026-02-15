@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@adobe/css-tools':
+        specifier: ^4.4.4
+        version: 4.4.4
       hexo:
         specifier: ^8.0.0
         version: 8.1.1(chokidar@3.6.0)
@@ -23,6 +26,9 @@ importers:
       hexo-generator-tag:
         specifier: ^2.0.0
         version: 2.0.0
+      hexo-pagination:
+        specifier: ^4.0.0
+        version: 4.0.0
       hexo-renderer-ejs:
         specifier: ^2.0.0
         version: 2.0.0
@@ -35,14 +41,26 @@ importers:
       hexo-server:
         specifier: ^3.0.0
         version: 3.0.0
+      hexo-theme-fluid:
+        specifier: ^1.9.8
+        version: 1.9.8(nunjucks@3.2.4(chokidar@3.6.0))
       hexo-theme-landscape:
         specifier: ^1.0.0
         version: 1.1.0
+      moment:
+        specifier: ^2.30.1
+        version: 2.30.1
+      nunjucks:
+        specifier: ^3.2.4
+        version: 3.2.4(chokidar@3.6.0)
 
 packages:
 
   '@adobe/css-tools@4.3.3':
     resolution: {integrity: sha512-rE0Pygv0sEZ4vBWHlAgJLGDU7Pm8xoO6p3wsEceb7GYAjScrOHpEo8KK/eVkAcnSM+slAEtXjA2JpdjLp4fJQQ==}
+
+  '@adobe/css-tools@4.4.4':
+    resolution: {integrity: sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg==}
 
   '@asamuzakjp/css-color@3.2.0':
     resolution: {integrity: sha512-K1A6z8tS3XsmCMM86xoWdn7Fkdn9m6RSVtocUrJYIwZnFVkng/PvkEoWtOWmP+Scc6saYWHWZYbndEEXxl24jw==}
@@ -429,6 +447,10 @@ packages:
     resolution: {integrity: sha512-8oo1iozloZo7TojPVYg4IxL3SJKCBdSJ908fTlIxIK7TWJIKdYnQlW31+12DBJ0NhVZA/lZisPObGF08wT8fKw==}
     engines: {node: '>=14'}
 
+  hexo-pagination@4.0.0:
+    resolution: {integrity: sha512-jNG6AX3EHzY3FRfdzB46tZ833CUX4WudZue3yv6kKaVCCWR61iwFL9LD6xQadvwHBuT1oHy444dJClWORG4sxg==}
+    engines: {node: '>=18'}
+
   hexo-renderer-ejs@2.0.0:
     resolution: {integrity: sha512-qCjE1IdwgDgv65qyb0KMVCwCdSVAkH0vwAe9XihjvaKWkmb9dtt8DgErOdqCXn0HReSyWiEVP2BrLRj3gyHwOQ==}
     engines: {node: '>=12'}
@@ -444,6 +466,12 @@ packages:
   hexo-server@3.0.0:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
+
+  hexo-theme-fluid@1.9.8:
+    resolution: {integrity: sha512-+HUx8xrBA2WWgJYMhlCy5L69LLgAL8PjsLIyIbh81Ftc0J71V69K04Zqv270VjRSs38rx9djeQPrgidtMdnh3g==}
+    engines: {node: '>=8.10.0'}
+    peerDependencies:
+      nunjucks: ^3.0.0
 
   hexo-theme-landscape@1.1.0:
     resolution: {integrity: sha512-nszjixBEiEDZjf7glAGbHg0nKGHZdUDwzFVVdRDeu4FeHfGcY5CZNl9sF4vSligjnD8IwFXpDfx5E+GRmNKvWg==}
@@ -945,6 +973,8 @@ snapshots:
 
   '@adobe/css-tools@4.3.3': {}
 
+  '@adobe/css-tools@4.4.4': {}
+
   '@asamuzakjp/css-color@3.2.0':
     dependencies:
       '@csstools/css-calc': 2.1.4(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)
@@ -1331,6 +1361,8 @@ snapshots:
 
   hexo-pagination@3.0.0: {}
 
+  hexo-pagination@4.0.0: {}
+
   hexo-renderer-ejs@2.0.0:
     dependencies:
       ejs: 3.1.10
@@ -1366,6 +1398,10 @@ snapshots:
       serve-static: 1.16.3
     transitivePeerDependencies:
       - supports-color
+
+  hexo-theme-fluid@1.9.8(nunjucks@3.2.4(chokidar@3.6.0)):
+    dependencies:
+      nunjucks: 3.2.4(chokidar@3.6.0)
 
   hexo-theme-landscape@1.1.0: {}
 
