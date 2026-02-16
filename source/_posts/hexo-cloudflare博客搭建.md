@@ -47,8 +47,7 @@ tags: [ Hexo, Cloudflare, Blog, CI/CD ]
   node -v
   npm -v
   ```
-  {% asset_img node.png 'Node.js 版本' %}
-
+![Node.js 安装](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236161.png)
   {% note info %}
   了 npm，你也可以使用 pnpm 作为包管理器。pnpm 是一个高性能、节省磁盘空间的 Node.js 包管理工具，在大型项目中优势更加明显。
   ```bash
@@ -68,7 +67,7 @@ tags: [ Hexo, Cloudflare, Blog, CI/CD ]
   # 检查 Git 版本
   git --version
   ```
-  {% asset_img git.png 'Git 版本' %}
+![Git 安装](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236159.png)
 
 ## 1.2 注册云服务账号
 
@@ -137,7 +136,7 @@ hexo clean && hexo generate && hexo server
 
 浏览器访问 `http://localhost:4000`，你应该能看到 Hexo 的默认页面。
 
-{% asset_img blog.png 'Hexo 的默认界面以及新博客' %}
+![Hexo 的默认界面以及新博客](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236150.png)
 
 ---
 
@@ -170,20 +169,19 @@ git push -u origin main
 
 1. 登录 Cloudflare 控制台，进入 `构建` > `Workers 和 Pages` > `添加` > `页面` 这个界面
 
-  {% asset_img cloudflare.png 'cloudflare page 界面' %}
+  ![cloudflare page 界面](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236151.png)
 
 2. 选择 `导入现有 Git 存储库`
 
-  {% asset_img cloudflare-page-import.png 'cloudflare page 导入界面' %}
+  ![cloudflare page 导入界面](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236156.png)
 
 3. 第一次使用会出现与 GitHub 授权，授权后，我们选择同步到 GitHub 上的博客仓库
 
-  {% asset_img github-authorization.png 'GitHub 仓库选择界面' %}
+  ![GitHub 授权仓库选择界面](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236160.png)
 
 4. 我们授权完成后，回到 Cloudflare 选择我们的账户和存储库，点击开始设置
 
-  {% asset_img cloudflare-setup.png 'GitHub 仓库选择界面' %}
-
+  ![GitHub 仓库选择界面](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236158.png)
 
 ## 4.2 配置构建和部署
 
@@ -197,13 +195,12 @@ git push -u origin main
 - 这里我们使用 `npx` 来运行 Hexo，确保使用项目内安装的 Hexo 版本，避免依赖全局环境。
 - `public` 是 Hexo 默认生成的静态文件目录，Cloudflare 会将该目录下的所有内容发布到互联网。
 
-{% asset_img cloudflare-setting.png 'Cloudflare 构建设置界面' %}
-
+![Cloudflare 构建设置界面](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236157.png)
 {% endnote %}
 
 点击 "保存并部署"，Cloudflare 将会开始第一次构建和部署。完成后，你将获得一个 `*.pages.dev` 的免费域名（在 `生产` > `域` ），通过该域名即可访问你的博客。
 
-{% asset_img cloudflare-deploy.png 'Cloudflare 部署成功界面' %}
+![Cloudflare 部署成功界面](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236155.png)
 
 ## 4.3 自动化流程 (CI/CD)
 
@@ -226,16 +223,15 @@ git push -u origin main
 
 1. 点击进入 `Workers 和 Pages` > `部署的项目名称` > `自定义域`
 
-{% asset_img cloudflare-custom-domain.png 'Cloudflare 自定义域' %}
+![Cloudflare 自定义域](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236152.png)
 
 2. 点击 `设置自定义域`，进入添加自定义域界面，输入自己的自定义的域名，点击 `继续` 
 
-{% asset_img cloudflare-custom-domain-setting.png 'Cloudflare 自定义域' %}
+![Cloudflare 自定义域](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236154.png)
 
 3. 到达 DNS 记录设置，我们继续点击 `激活域` 就成功的绑定了自定义域名
 
-{% asset_img cloudflare-custom-domain-dns.png 'Cloudflare 自定义域 DNS 设置' %}
-
+![Cloudflare 配置DNS](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236153.png)
 
 # 总结
 
