@@ -142,11 +142,29 @@ flatpak install flathub com.github.tchx84.Flatseal
 
 ![依赖安装过程中自动弹出的确认窗口](https://img.556756.xyz/PicGo/blogs/2026/02/20260216203212587.png)
 
-## 3. 移植文件与注册表
+## 3. 安装 `NI Package Manager`
+
+我们 `Bottle` 的 `程序` 列表，点击 `添加快捷方式...` 选择 Multism 安装程序(通常为 `autorun.exe` ) ，点击运行
+
+![运行 Multisim 安装程序](https://img.556756.xyz/PicGo/blogs/2026/02/20260216213434025.png)
+
+我们选择第一项目 `Install NI Circuit Design Suite 14.3` ，该安装程序会安装两个软件
+
+- `NI Package Manager` : 这个是可以正常安装，并且是后面文件修复的软件
+
+- `Mulitisim` 本体 : 这里会报一个微软运行时的错误，无法正常安装，不用理会
+![微软运行时错误](https://img.556756.xyz/PicGo/blogs/2026/02/20260217114152040.png)
+{% note info %}
+有兴趣的可以尝试解包 `setup/pool/ni-msvcrt-2015_14.1.5.49152-0+f0_windows_all.nipkg` 来解决
+![](https://img.556756.xyz/PicGo/blogs/2026/02/20260217114235497.png)
+{% endnote %}
+
+## 4. 移植文件与注册表
 
 现在，将我们在步骤 1 中准备好的文件和注册表信息放入 `Bottle` 中。
 
 ### a. 导入文件
+
 1.  在 `Bottle` 的主界面，点击 `浏览C盘` 按钮可以快速打开该 `Bottle` 对应的 `drive_c` 文件夹。
 2.  将步骤 1 中从 `Windows` 复制出来的所有文件夹，按照原有的目录结构，放入 `drive_c` 中（如果已存在同名文件夹，直接合并）。
 
@@ -166,7 +184,7 @@ flatpak install flathub com.github.tchx84.Flatseal
 
 ![使用 Bottles 内置的注册表编辑器](https://img.556756.xyz/PicGo/blogs/2026/02/20260216212459397.png)
 
-## 4. 修复安装并运行 Multisim
+## 5. 修复安装并运行 Multisim
 
 文件和注册表就位后，我们还需要利用 `NI Package Manager` 修复一下文件路径和配置，以适应新的 `wine` 环境。
 
