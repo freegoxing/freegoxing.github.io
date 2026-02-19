@@ -79,10 +79,10 @@ flatpak install flathub com.github.tchx84.Flatseal
 1.  打开 `Bottles` 应用。
 2.  点击主界面右上角的 “+” 号或 “创建新 Bottle” 按钮。
 3.  为您的 `bottle` 命名，例如 `Multisim`。
-4.  选择 “应用 (Application)” 作为环境类型。
+4.  选择 “自定义” 作为环境类型。
 5.  点击 “创建” 按钮，`Bottles` 会自动为您配置好一个新的 `wine` 环境。
 
-![在 Bottles 中为 Multisim 创建一个新的应用环境](https://img.556756.xyz/PicGo/blogs/2026/02/20260216201951670.png)
+![在 Bottles 中为 Multisim 创建一个新的应用环境](https://img.556756.xyz/PicGo/blogs/2026/02/20260219143912647.png)
 
 {% note info %}
 
@@ -118,16 +118,7 @@ flatpak install flathub com.github.tchx84.Flatseal
 
 回到 `Bottles`，为 `Multisim` 创建一个纯净的运行环境。
 
-### a. 删除默认的 .NET Framework
-
-`Multisim` 对 `.NET Framework` 版本很敏感，`wine` 环境默认自带的 `mono` 框架可能会导致兼容性问题，需要先将其卸载，后续替换为“原生”的框架。
-
-1.  进入创建好的 `Bottle`，点击 `依赖` 标签页。
-2.  搜索 `mono`，点击其右侧的三个点，选择 `卸载`。
-
-![卸载与 Multisim 不兼容的默认 mono 依赖](https://img.556756.xyz/PicGo/blogs/2026/02/20260217105848335.png)
-
-### b. 安装所需依赖
+### a. 安装所需依赖
 
 `Multisim` 的正常运行依赖 `.NET Framework`、`Visual C++` 运行时和 `JET` 数据库引擎。
 
