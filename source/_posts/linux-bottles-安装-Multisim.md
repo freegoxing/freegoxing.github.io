@@ -123,11 +123,19 @@ flatpak install flathub com.github.tchx84.Flatseal
 `Multisim` 的正常运行依赖 `.NET Framework`、`Visual C++` 运行时和 `JET` 数据库引擎。
 
 1.  **.NET Framework 4.6.2**: 在依赖页面搜索 `dotnet462` 并点击安装。
+
     ![搜索并安装 .NET Framework 4.6.2 (dotnet462)](https://img.556756.xyz/PicGo/blogs/2026/02/20260216202934971.png)
+    
+
 2.  **Microsoft Visual C++**: 在依赖页面搜索 `vcredist2022` 并点击安装。
+
     ![安装 Microsoft Visual C++ 2022 运行时](https://img.556756.xyz/PicGo/blogs/2026/02/20260217123857682.png)
+    
+
 3.  **JET 数据库引擎**: 在依赖页面搜索 `jet40` 并点击安装。缺少此引擎将导致无法从库中拖出元器件。
+
     ![安装 JET 4.0 数据库引擎以支持访问数据库](https://img.556756.xyz/PicGo/blogs/2026/02/20260216203755628.png)
+
 
 在安装过程中，如果出现弹窗，保持默认选项并点击 `继续` 或 `Install` 即可。
 
@@ -144,10 +152,15 @@ flatpak install flathub com.github.tchx84.Flatseal
 - `NI Package Manager` : 这个是可以正常安装，并且是后面文件修复的软件
 
 - `Mulitisim` 本体 : 这里会报一个微软运行时的错误，无法正常安装，不用理会
+
+
 ![微软运行时错误](https://img.556756.xyz/PicGo/blogs/2026/02/20260217114152040.png)
+
 {% note info %}
 有兴趣的可以尝试解包 `setup/pool/ni-msvcrt-2015_14.1.5.49152-0+f0_windows_all.nipkg` 来解决
+
 ![](https://img.556756.xyz/PicGo/blogs/2026/02/20260217114235497.png)
+
 {% endnote %}
 
 ## 4. 移植文件与注册表
@@ -166,6 +179,7 @@ flatpak install flathub com.github.tchx84.Flatseal
 /home/<YOUR_USER_NAME>/.var/app/com.usebottles.bottles/data/bottles/bottles/<YOUR_Bottle_Name>/drive_c
 ```
 ![通过 Bottles 界面快速浏览 C:/ 盘](https://img.556756.xyz/PicGo/blogs/2026/02/20260216204314554.png)
+
 {% endnote %}
 
 ### b. 导入注册表
@@ -185,12 +199,21 @@ flatpak install flathub com.github.tchx84.Flatseal
     /drive_c/Program Files/National Instruments/NI Package Manager/NIPackageManager.exe
     ```
 2.  运行 `NI Package Manager`。
+
+
     ![启动 NI Package Manager 准备修复安装](https://img.556756.xyz/PicGo/blogs/2026/02/20260217114904023.png)
+    
 3.  在打开的窗口中，切换到 `已安装` 标签页。
 4.  勾选所有列出的 National Instruments 相关软件，然后点击 `修复` 按钮。
+
+
     ![在 NI Package Manager 中选择所有组件进行修复](https://img.556756.xyz/PicGo/blogs/2026/02/20260217115034242.png)
+    
 5.  等待修复过程完成。
+
+
     ![NI Package Manager 成功完成修复操作](https://img.556756.xyz/PicGo/blogs/2026/02/20260217115849635.png)
+    
 
 ### b. 运行 Multisim
 修复完成后，就可以运行 `Multisim` 主程序了。
@@ -201,9 +224,15 @@ flatpak install flathub com.github.tchx84.Flatseal
     ```
 2.  在运行之前，建议进行一项优化：点击 `multisim.exe` 快捷方式旁边的三个点，进入 `首选项`，关闭 `DXVK` 和 `VKD3D`。这有助于避免某些图形渲染问题。
 3.  现在，点击三角形运行按钮！
+
+
     ![在 Bottles 程序列表中管理和运行 multisim.exe](https://img.556756.xyz/PicGo/blogs/2026/02/20260216213158809.png)
+    
 4.  如果一切顺利，你将看到 `Multisim` 的启动界面。无论是选择试用还是激活，软件都应该可以正常打开并进行仿真了。
+
+
     ![成功启动 Multisim 后的激活窗口](https://img.556756.xyz/PicGo/blogs/2026/02/20260217124208289.png)
+    
     ![Multisim 正常运行并可进行电路仿真](https://img.556756.xyz/PicGo/blogs/2026/02/20260217124524471.png)
 
 ### c. 创建桌面快捷方式 (可选)
