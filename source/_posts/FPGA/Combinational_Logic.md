@@ -80,6 +80,7 @@ module max2_tb();
         #20;
         s0 = 1; s1 = 1; s_sel = 1; // 预期输出 out = s1 = 1
         #20;
+        ......
         $stop; // 停止仿真
     end
 
