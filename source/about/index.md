@@ -1,6 +1,7 @@
 ---
 title: about
 date: 2026-02-16 17:40:22
+layout: about
 ---
 
 一名热爱探索和分享技术的开发者。
