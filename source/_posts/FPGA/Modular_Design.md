@@ -5,7 +5,7 @@ categories: [FPGA]
 tags: [Verilog, FPGA, 模块化, 参数化]
 ---
 
-在复杂的 FPGA 工程中，**模块化（Modularity）**与**参数化（Parameterization）**是衡量代码质量的核心指标。本文通过两个核心案例，重点展示如何通过参数传递提升模块的可复用性。
+在复杂的 FPGA 工程中， **模块化（Modularity）** 与 **参数化（Parameterization）** 是衡量代码质量的核心指标。本文通过两个核心案例，重点展示如何通过参数传递提升模块的可复用性。
 
 <!-- more -->
 
