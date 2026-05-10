@@ -2,7 +2,7 @@
 title: 通过 Bottles 在 Linux 上安装和运行 Multisim
 date: 2026-02-16 19:23:43
 tags: [linux, bottles, multisim, wine, flatpak]
-categories:
+categories: [linux]
 ---
 
 # 前言
@@ -126,12 +126,10 @@ flatpak install flathub com.github.tchx84.Flatseal
 
     ![搜索并安装 .NET Framework 4.6.2 (dotnet462)](https://img.556756.xyz/PicGo/blogs/2026/02/20260216202934971.png)
     
-
 2.  **Microsoft Visual C++**: 在依赖页面搜索 `vcredist2022` 并点击安装。
 
     ![安装 Microsoft Visual C++ 2022 运行时](https://img.556756.xyz/PicGo/blogs/2026/02/20260217123857682.png)
     
-
 3.  **JET 数据库引擎**: 在依赖页面搜索 `jet40` 并点击安装。缺少此引擎将导致无法从库中拖出元器件。
 
     ![安装 JET 4.0 数据库引擎以支持访问数据库](https://img.556756.xyz/PicGo/blogs/2026/02/20260216203755628.png)
@@ -202,18 +200,18 @@ flatpak install flathub com.github.tchx84.Flatseal
 
 
     ![启动 NI Package Manager 准备修复安装](https://img.556756.xyz/PicGo/blogs/2026/02/20260217114904023.png)
-    
+
 3.  在打开的窗口中，切换到 `已安装` 标签页。
 4.  勾选所有列出的 National Instruments 相关软件，然后点击 `修复` 按钮。
 
 
     ![在 NI Package Manager 中选择所有组件进行修复](https://img.556756.xyz/PicGo/blogs/2026/02/20260217115034242.png)
-    
+
 5.  等待修复过程完成。
 
 
     ![NI Package Manager 成功完成修复操作](https://img.556756.xyz/PicGo/blogs/2026/02/20260217115849635.png)
-    
+
 
 ### b. 运行 Multisim
 修复完成后，就可以运行 `Multisim` 主程序了。
@@ -227,7 +225,7 @@ flatpak install flathub com.github.tchx84.Flatseal
 
 
     ![在 Bottles 程序列表中管理和运行 multisim.exe](https://img.556756.xyz/PicGo/blogs/2026/02/20260216213158809.png)
-    
+
 4.  如果一切顺利，你将看到 `Multisim` 的启动界面。无论是选择试用还是激活，软件都应该可以正常打开并进行仿真了。
 
 
