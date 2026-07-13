@@ -25,12 +25,12 @@ ssh-keygen -t ed25519 -C "你的邮箱"
 ssh-copy-id -i ~/.ssh/id_ed25519.pub 用户名@远程服务器地址
 ```
 
-完成免密登录后，为了让后续连接更加简便，我们需要配置一下 `~/.ssh/config`，设置好远程主机的别名：
+完成免密登录后，为了让后续连接更加简便，我们需要配置一下 `~/.ssh/config`，设置好远程主机的别名（这里我就直接设置别名为"ubuntu""）：
 
 ```text ~/.ssh/config
-Host ubuntu
+Host 设置的别名
     HostName 远程服务器地址
-    User free
+    User 用户名
     IdentityFile ~/.ssh/id_ed25519
     Port 22
 ```
