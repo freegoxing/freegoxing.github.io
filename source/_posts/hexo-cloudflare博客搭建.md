@@ -49,7 +49,7 @@ tags: [ Hexo, Cloudflare, Blog, CI/CD ]
   ```
 ![Node.js 安装](https://img.556756.xyz/PicGo/blogs/2026/02/20260216172236161.png)
   {% note info %}
-  了 npm，你也可以使用 pnpm 作为包管理器。pnpm 是一个高性能、节省磁盘空间的 Node.js 包管理工具，在大型项目中优势更加明显。
+  除了 npm，你也可以使用 pnpm 作为包管理器。pnpm 是一个高性能、节省磁盘空间的 Node.js 包管理工具，在大型项目中优势更加明显。
   ```bash
   # 安装 pnpm
   npm install -g pnpm
