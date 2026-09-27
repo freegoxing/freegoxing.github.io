@@ -2,7 +2,7 @@
 title: 利用 SSH 端口转发实现远程代理访问
 date: 2026-07-08 22:15:00
 tags: [ SSH, 代理, Linux, 端口转发 ]
-categories: [linux]
+categories: [inet]
 ---
 
 # 前言
@@ -10,6 +10,8 @@ categories: [linux]
 在日常使用中，我们经常会在远程服务器上部署 Clash 或其他代理工具（例如 mixed port 设为 `17897`）。为了在本地也能安全、便捷地使用这个远端代理，直接开放服务器防火墙端口并不是一个明智的选择。
 
 通过 SSH 端口转发（SSH Tunneling），我们可以将远端的代理端口安全地映射到本地。结合 Systemd 用户服务和 Zsh 配置，就能实现优雅的无缝代理体验。本文将分享我目前的方案。
+
+> 如果希望进一步通过 Clash Verge Rev 的 TUN 模式透明接管系统流量，可以继续阅读 {% post_link inet/clash-verge-ssh-tun-network-flow "Clash Verge Rev + SSH 隧道：利用 TUN 模式实现 Linux 全局代理" %}。
 
 # SSH 客户端配置
 
