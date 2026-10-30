@@ -2,7 +2,8 @@
 title: Nix 安装的应用在终端能运行，却不出现在 GNOME「打开方式」
 date: 2026-10-25
 tags: [linux, ubuntu, nix, home-manager, gnome]
-categories: [linux]
+categories: [Nix/NixOS]
+permalink: 2026/10/25/linux/Nix-Home-Manager-应用未出现在-GNOME-打开方式/
 description: 记录非 NixOS 上使用 Home Manager 安装 Okular 后，排查 GNOME Files 应用列表、MIME 关联和图形会话环境的过程。
 ---
 
